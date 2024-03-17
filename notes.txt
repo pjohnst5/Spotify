@@ -1,0 +1,13 @@
+curl --request GET \
+  --url https://api.spotify.com/v1/playlists/1UWF7UFrkDbsn0mMymWXCv \
+  --header 'Authorization: Bearer BQCPSsC5r0cD4Ya66bkOoklGxUSauB0BsUx62Ec-7wsV_lt4q5CjRuzS6mbyTXsHNfnqAk36eFUNryrXj1xSP6LaUMZfx-IU_YBgDUrEONucaDAAqiw'
+
+
+curl --request GET \
+  --url https://api.spotify.com/v1/users/pj_lad/playlists \
+  --header 'Authorization: Bearer BQDqyzejxyH7Njw7HPZGkjGvVWBDc79AVja0hZ3j6H8Zupq4yVnQ3yXHC9gpinf-N1QFQoPD0XuMpNy96lFd9dFZeOZVash35dEncuL4mX6LhzITjk8'
+
+
+curl --request GET \
+  --url https://api.spotify.com/v1/me/tracks \
+  --header 'Authorization: Bearer BQBJLt0ek8la1_sfwgSjy5T9tQ0rZBu0yE11AOZi76Bxw9wpy6_B-oAncrofSm2wHda397sZ0KI84Gpb2eQu6ja-jnp9Jg27FMuf-nooRB1kfbY9kV8'
