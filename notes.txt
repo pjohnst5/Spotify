@@ -17,3 +17,13 @@ curl --request GET \
 
 
 So I would want 9pm my time which is 3am function time
+
+
+func new --name Appifier --template "Timer trigger" --authlevel "anonymous"
+
+https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-python?tabs=macos%2Cbash%2Cazure-cli%2Cbrowser
+
+spotipy==2.23.0
+
+
+func azure functionapp publish appifier2
