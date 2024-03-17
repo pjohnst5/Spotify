@@ -27,3 +27,6 @@ spotipy==2.23.0
 
 
 func azure functionapp publish appifier2
+
+
+0 0 3 * * *

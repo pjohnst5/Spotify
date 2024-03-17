@@ -24,3 +24,7 @@ def Appifier(myTimer: func.TimerRequest) -> None:
     # Replace latest 20 songs
     sp.playlist_replace_items(playlist_id=playlist_id, items=tracks)
     logging.info('Replaced latest 20 songs')
+    for idx, item in enumerate(results['items']):
+        track = item['track']
+        print_str = str(idx) + track['artists'][0]['name'] + " - " + track['name']
+        logging.info(print_str)
