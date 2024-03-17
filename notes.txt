@@ -11,3 +11,9 @@ curl --request GET \
 curl --request GET \
   --url https://api.spotify.com/v1/me/tracks \
   --header 'Authorization: Bearer BQBJLt0ek8la1_sfwgSjy5T9tQ0rZBu0yE11AOZi76Bxw9wpy6_B-oAncrofSm2wHda397sZ0KI84Gpb2eQu6ja-jnp9Jg27FMuf-nooRB1kfbY9kV8'
+
+
+2024-03-16 9:10PM my time is 2024-03-17 03:10:00.011 2024-03-17 03:10:00.004954
+
+
+So I would want 9pm my time which is 3am function time
