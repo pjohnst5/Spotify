@@ -6,7 +6,7 @@ from spotipy.oauth2 import SpotifyOAuth
 
 app = func.FunctionApp()
 
-@app.timer_trigger(schedule="0 * * * * *", arg_name="myTimer", run_on_startup=False,
+@app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False)
 def Appifier(myTimer: func.TimerRequest) -> None:
     logging.info('Python timer trigger function executed.')
