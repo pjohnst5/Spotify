@@ -1,5 +1,5 @@
 import logging
-import datetime
+import os
 import azure.functions as func
 
 app = func.FunctionApp()
@@ -10,6 +10,6 @@ def timer_trigger(myTimer: func.TimerRequest) -> None:
     if myTimer.past_due:
         logging.info('The timer is past due!')
 
-    current_time = datetime.datetime.now()
-    logging.info(current_time)
+    test = os.getenv("HEY")
+    logging.info(test)
     logging.info('Python timer trigger function executed.')
