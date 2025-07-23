@@ -13,7 +13,6 @@ client_id = os.getenv("SPOTIPY_CLIENT_ID")
 client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
 playlist_id = os.getenv("PLAYLIST_ID")
 playlist_id_2 = os.getenv("PLAYLIST_ID_2")
-mini_playlist_id_1 = os.getenv("MINI_PLAYLIST_ID_1")
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 user = sp.me()
