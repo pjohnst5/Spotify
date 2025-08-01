@@ -10,12 +10,12 @@ app = func.FunctionApp()
 @app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False)
 def Appifier(myTimer: func.TimerRequest) -> None:
-    logging.info('Python timer trigger function executed.')
+    logging.info('Starting to make last 20 liked songs playlist')
     if myTimer.past_due:
         logging.info('The timer is past due!')
 
     scope = "user-library-read playlist-modify-private"
-    playlist_id = os.getenv("PLAYLIST_ID")
+    playlist_id = os.getenv("LAST_20_ID")
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
     # Get latest 20 songs
@@ -33,12 +33,12 @@ def Appifier(myTimer: func.TimerRequest) -> None:
 @app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False)
 def Appifier2(myTimer: func.TimerRequest) -> None:
-    logging.info('Python timer trigger function executed.')
+    logging.info('Starting to make random 20 songs playlist')
     if myTimer.past_due:
         logging.info('The timer is past due!')
 
     scope = "user-library-read playlist-modify-private"
-    playlist_id_2 = os.getenv("PLAYLIST_ID_2")
+    playlist_id_2 = os.getenv("RANDOM_20_ID")
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
     # Make random list of 20 liked songs
@@ -54,7 +54,7 @@ def Appifier2(myTimer: func.TimerRequest) -> None:
             break
         offset += limit
 
-    print(f"Number of liked songs: {liked_songs_count}")
+    logging.info(f"Number of liked songs: {liked_songs_count}")
 
     population = range(0, liked_songs_count)
     random_integers = random.sample(population, k)

@@ -11,8 +11,8 @@ load_dotenv()
 scope = "user-library-read playlist-modify-private"
 client_id = os.getenv("SPOTIPY_CLIENT_ID")
 client_secret = os.getenv("SPOTIPY_CLIENT_SECRET")
-playlist_id = os.getenv("PLAYLIST_ID")
-playlist_id_2 = os.getenv("PLAYLIST_ID_2")
+last_20_id = os.getenv("LAST_20_ID")
+random_20_id = os.getenv("RANDOM_20_ID")
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 user = sp.me()
@@ -22,7 +22,7 @@ user = sp.me()
 # tracks = [item['track']['id'] for item in results['items']]
 
 # # Replace latest 20 songs
-# sp.playlist_replace_items(playlist_id=playlist_id, items=tracks)
+# sp.playlist_replace_items(playlist_id=last_20_id, items=tracks)
 
 # Make random list of 20 liked songs
 liked_songs_count = 0
@@ -50,7 +50,7 @@ for rand_int in random_integers:
     tracks.append(track)
     track_ids.append(track['id'])
 
-sp.playlist_replace_items(playlist_id=playlist_id_2, items=track_ids)
+sp.playlist_replace_items(playlist_id=random_20_id, items=track_ids)
 
 logging.info('Updated random 20 songs')
 for idx, track in enumerate(tracks):

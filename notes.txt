@@ -39,3 +39,6 @@ Creating a new playlist:
 
 This does not do it idempotently though even if name is same, it just creates another playlist with same name
 So would have to paginate out all the playlists of a user first to check if name is same, and then, not make it if it already exists haha
+
+Deploy
+func azure functionapp publish appifier2
