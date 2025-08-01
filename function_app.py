@@ -9,7 +9,7 @@ app = func.FunctionApp()
 
 @app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False)
-def Appifier(myTimer: func.TimerRequest) -> None:
+def Last20(myTimer: func.TimerRequest) -> None:
     logging.info('Starting to make last 20 liked songs playlist')
     if myTimer.past_due:
         logging.info('The timer is past due!')
@@ -32,7 +32,7 @@ def Appifier(myTimer: func.TimerRequest) -> None:
 
 @app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer", run_on_startup=False,
               use_monitor=False)
-def Appifier2(myTimer: func.TimerRequest) -> None:
+def Random20(myTimer: func.TimerRequest) -> None:
     logging.info('Starting to make random 20 songs playlist')
     if myTimer.past_due:
         logging.info('The timer is past due!')
