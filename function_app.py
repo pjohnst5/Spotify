@@ -7,7 +7,7 @@ import random
 
 app = func.FunctionApp()
 
-@app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer")
+@app.timer_trigger(schedule="0 0 7 * * *", arg_name="myTimer")
 def Last20(myTimer: func.TimerRequest) -> None:
     logging.info('Starting to make last 20 liked songs playlist')
     if myTimer.past_due:
@@ -29,7 +29,7 @@ def Last20(myTimer: func.TimerRequest) -> None:
         print_str = str(idx) + " " + track['artists'][0]['name'] + " - " + track['name']
         logging.info(print_str)
 
-@app.timer_trigger(schedule="0 0 3 * * *", arg_name="myTimer")
+@app.timer_trigger(schedule="0 0 7 * * *", arg_name="myTimer")
 def Random20(myTimer: func.TimerRequest) -> None:
     logging.info('Starting to make random 20 songs playlist')
     if myTimer.past_due:

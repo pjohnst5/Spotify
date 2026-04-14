@@ -8,7 +8,7 @@
             "name": "Spotty",
             "type": "debugpy",
             "request": "launch",
-            "program": "/Users/pauljohnston/Documents/Spotify/app.py",
+            "program": "/Users/pauljohnston/Documents/Spotify/localDebugging.py",
             "console": "integratedTerminal"
         }
     ]
